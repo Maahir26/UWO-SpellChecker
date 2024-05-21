@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<!-- Root layout component with preferred height and width -->
+
+<BorderPane prefHeight="600" prefWidth="600" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.spellcheckeruwo.DocumentScreenController">
+	<!-- Top region containing the menu bar -->
+	<top>
+		<VBox>
+			<MenuBar fx:id="docMenubar" prefHeight="25" stylesheets="@style.css">
+				<Menu text="File">
+					<!-- Menu items for file operations -->
+					<MenuItem onAction="#handleOpenDocument" text="Open" />
+					<MenuItem onAction="#handleSaveDocument" text="Save" />
+					<MenuItem onAction="#handleSaveAsDocument" text="Save As" />
+					<MenuItem onAction="#handleDeleteDocument" text="Delete" />
+               		<SeparatorMenuItem mnemonicParsing="false" />
+					<MenuItem onAction="#backToDashHandler" text="Back to Dash" />
+				</Menu>
+				<Menu text="Edit">
+					<MenuItem onAction="#handleRevertDocument" text="Revert" />
+				</Menu>
+				<Menu text="View">
+					<MenuItem onAction="#handleZoomIn" text="Zoom In" />
+			   		<MenuItem onAction="#handleZoomOut" text="Zoom Out" />
+				</Menu>
+				<Menu text="Help">
+					<MenuItem onAction="#handleShowHelp" text="Help" />
+				</Menu>
+				<Menu text="Options">
+					<MenuItem onAction="#handleOpenOptions" text="Options" />
+				</Menu>
+			</MenuBar>
+		</VBox>
+	</top>
+	<!-- Center region with a split pane for content and tools -->
+	<center>
+		<SplitPane dividerPositions="0.5">
+			<!-- Left side of the split pane for displaying the document -->
+			<BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #444444;">
+				<top>
+					<TabPane fx:id="docTabs" minHeight="-Infinity" side="BOTTOM" tabClosingPolicy="ALL_TABS" />
+				</top>
+				<center>
+					<!-- Non-editable text area for displaying the document -->
+					<TextArea fx:id="documentTextArea" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1000.0" prefWidth="600.0" visible="false" wrapText="true" />
+				</center>
+			</BorderPane>
+			<!-- Right side of the split pane for spellchecking tools -->
+			<ScrollPane hbarPolicy="NEVER" maxWidth="-Infinity" minWidth="0">
+				<VBox prefWidth="200.0">
+					<!-- Titled panes for various spellchecking tools and metrics -->
+					<TitledPane text="Word">
+						<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="-Infinity" spacing="5.0">
+							<Label text="Current Word:">
+								<font>
+									<Font name="Arial" size="12.0" />
+								</font>
+							</Label>
+							<TextArea fx:id="spellingMistakeTextArea" editable="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="180.0" />
+							<HBox>
+								<VBox.margin>
+									<Insets />
+								</VBox.margin>
+								<Button alignment="CENTER" onAction="#handlePrevious" prefHeight="25.0" prefWidth="70.0" text="Previous" />
+								<Button alignment="CENTER" onAction="#handleNext" prefHeight="25.0" prefWidth="70.0" text="Next">
+									<HBox.margin>
+										<Insets left="40.0" />
+									</HBox.margin>
+								</Button>
+							</HBox>
+						</VBox>
+					</TitledPane>
+
+					<TitledPane text="Available Fixes">
+						<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="-Infinity" spacing="5.0">
+							<TextArea fx:id="suggestionsOne" editable="false" maxHeight="-Infinity" minHeight="-Infinity" onMouseClicked="#handleClickSuggestionsOne" prefHeight="30.0" prefWidth="180.0" />
+
+							<TextArea fx:id="suggestionsTwo" editable="false" maxHeight="-Infinity" minHeight="-Infinity" onMouseClicked="#handleClickSuggestionsTwo" prefHeight="30.0" prefWidth="180.0" />
+							<TextArea fx:id="suggestionsThree" editable="false" maxHeight="-Infinity" minHeight="-Infinity" onMouseClicked="#handleClickSuggestionsThree" prefHeight="30.0" prefWidth="180.0" />
+						</VBox>
+					</TitledPane>
+					<TitledPane text="Dictionary">
+
+
+						<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="-Infinity" spacing="5.0">
+							<Button alignment="TOP_LEFT" onAction="#handleIgnoreWord" prefHeight="25.0" prefWidth="180.0" text="Ignore Word">
+								<font>
+									<Font name="Arial" size="12.0" />
+								</font>
+							</Button>
+							<Button alignment="TOP_LEFT" onAction="#handleIgnoreAllInstanceWord" prefHeight="25.0" prefWidth="180.0" text="Ignore all instance of Word">
+								<font>
+									<Font name="Arial" size="12.0" />
+								</font>
+							</Button>
+							<Button alignment="TOP_LEFT" onAction="#handleAddToDict" prefHeight="25.0" prefWidth="180.0" text="Add Word to Dictionary">
+								<font>
+									<Font name="Arial" size="12.0" />
+								</font>
+							</Button>
+							<Button alignment="TOP_LEFT" onAction="#handleDeleteWord" prefHeight="25.0" prefWidth="180.0" text="Delete Word">
+								<font>
+									<Font name="Arial" size="12.0" />
+								</font>
+							</Button>
+							<Button alignment="TOP_LEFT" onAction="#handleManualCorr" prefHeight="25.0" prefWidth="180.0" text="Manual Correction">
+								<font>
+									<Font name="Arial" size="12.0" />
+								</font>
+							</Button>
+							<TextArea fx:id="manualCorrection" editable="true" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="180.0" />
+						</VBox>
+					</TitledPane>
+					<TitledPane text="Metrics">
+						<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="-Infinity" spacing="5.0">
+							<HBox prefWidth="180.0">
+								<Label text="Letter Count: " />
+								<Label fx:id="numberOfCharacters" text="0" />
+							</HBox>
+							<HBox>
+								<Label text="Line Count: " />
+								<Label fx:id="numberOfLines" text="0" />
+							</HBox>
+							<HBox>
+								<Label text="Misspelled Word Count: " />
+								<Label fx:id="numberOfMisspelledWords" text="0" />
+							</HBox>
+							<HBox>
+								<Label text="Double Word Count: " />
+								<Label fx:id="numberOfDoubleWords" text="0" />
+							</HBox>
+							<HBox>
+								<Label text="Words Fixed Manually: " />
+								<Label fx:id="numberOfWordsFixedByManual" text="0" />
+							</HBox>
+							<HBox>
+								<Label text="Words Fixed by Misspelling: " />
+								<Label fx:id="numberOfWordsFixedByMisspelling" text="0" />
+							</HBox>
+							<HBox>
+								<Label text="Words Deleted: " />
+								<Label fx:id="numberOfWordsDeleted" text="0" />
+							</HBox>
+							<!-- Add any other metrics you need -->
+						</VBox>
+					</TitledPane>
+				</VBox>
+			</ScrollPane>
+		</SplitPane>
+	</center>
+</BorderPane>

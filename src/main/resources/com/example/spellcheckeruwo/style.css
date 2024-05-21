@@ -1,0 +1,55 @@
+/* Main container style */
+#MainContainer {
+    -fx-background-color: #FFFFFF; /* Set background color to white */
+}
+
+/* Style for the header bar */
+.header {
+    -fx-background-color: #4F2683; /* Set background color for the header */
+    -fx-pref-height: 10px; /* Set preferred height for the header */
+    /* Ensure the header bar has the preferred height */
+}
+
+/* Style for labels in the header */
+.header-label {
+    -fx-font-size: 30px; /* Set font size */
+    -fx-font-weight: bold; /* Make the font bold */
+    -fx-text-fill: #FFFFFF; /* Set text color to white */
+    -fx-alignment: center; /* Align text to the center */
+    -fx-padding: 10 0 0 0; /* Adjust padding to center the text vertically */
+}
+
+/* Style for the sidebar */
+.sidebar {
+    -fx-background-color: #D3D3D3; /* Set background color for the sidebar */
+    -fx-pref-width: 200px; /* Set preferred width for the sidebar */
+    -fx-spacing: 0; /* Set spacing to 0 */
+    /* Increase the width of the sidebar */
+}
+
+/* Style for list views */
+.list-view {
+    -fx-background-color: #FFFFFF; /* Set background color to white */
+    -fx-text-fill: #000000; /* Set text color to black */
+}
+
+/* General button style */
+.button {
+    -fx-background-color: #D3D3D3; /* Set background color for buttons */
+    -fx-text-fill: #000000; /* Set text color to black */
+    -fx-border-width: 0; /* Remove border width */
+    -fx-font-size: 20px; /* Set font size for buttons */
+}
+
+/* Button hover effect */
+.button:hover {
+    -fx-background-color: #BEBEBE; /* Change background color when hovered */
+}
+
+/* Menu & Menu Item focus/hover effect */
+.menu:hover, .menu:showing{
+  -fx-background-color: #4F2683;
+}
+.menu-item:focused {
+     -fx-background-color: #4F2683; /* UWO purple for highlighting */
+}

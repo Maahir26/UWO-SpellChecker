@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="200.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.spellcheckeruwo.ErrorScreenController">
+   <children>
+      <Button fx:id="okButton" layoutX="273.0" layoutY="149.0" mnemonicParsing="false" onAction="#closeScreen" text="Ok">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="2.0" layoutY="14.0" prefHeight="36.0" prefWidth="593.0" text="Error:">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

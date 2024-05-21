@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<!-- Root container for the exit confirmation dialog -->
+<AnchorPane fx:id="screen" prefHeight="200.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.spellcheckeruwo.ExitConfirmationController">
+    <children>
+        <!-- Main label asking user for confirmation to exit -->
+        <Label fx:id="myMainLabel" alignment="CENTER" prefHeight="70.0" prefWidth="600.0" text="Are you sure you would like to exit?" textAlignment="CENTER" textFill="#4f2683">
+            <font>
+                <Font name="Arial Bold" size="30.0" />
+            </font>
+        </Label>
+
+        <!-- 'Yes' button for confirming the exit -->
+        <Button fx:id="yesButton" alignment="CENTER" contentDisplay="CENTER" layoutX="212.0" layoutY="125.0" onAction="#handleClose" style="-fx-background-color: #4f2683" text="Yes" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Button>
+
+        <!-- 'No' button for cancelling the exit -->
+        <Button fx:id="noButton" alignment="CENTER" contentDisplay="CENTER" layoutX="325.0" layoutY="125.0" onAction="#handleNoButton" prefHeight="36.0" prefWidth="63.0" style="-fx-background-color: #4f2683" text="No" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

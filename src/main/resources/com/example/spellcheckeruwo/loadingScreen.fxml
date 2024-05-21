@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<!-- Root layout container for the loading screen -->
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.spellcheckeruwo.LoadingScreenController">
+
+    <!-- Main label displaying the title of the application -->
+    <Label fx:id="myMainLabel" alignment="CENTER" prefHeight="70.0" prefWidth="601.0" text="UWO Spell Checker" textAlignment="CENTER" textFill="#4f2683">
+        <font>
+            <Font name="Arial Bold" size="50.0" />
+        </font>
+    </Label>
+
+    <!-- Image view for displaying the application's logo -->
+    <ImageView fx:id="myImageLogo" fitHeight="216.0" fitWidth="241.0" layoutX="180.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../../../images/uwoMustangsLogo.png" />
+        </image>
+    </ImageView>
+
+    <!-- Progress bar indicating the loading progress -->
+    <ProgressBar fx:id="myProgressBar" layoutX="13.0" layoutY="346.0" prefHeight="40.0" prefWidth="572.0" progress="0.0" />
+
+    <!-- Label displaying the percentage of loading progress -->
+    <Label fx:id="myProgressLabel" layoutX="281.0" layoutY="351.0" text="0%" textFill="#4f2683">
+        <font>
+            <Font name="Arial Bold" size="25.0" />
+        </font>
+    </Label>
+</AnchorPane>

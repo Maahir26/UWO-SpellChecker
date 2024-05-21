@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<!-- Root container for the Previous State confirmation screen -->
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.spellcheckeruwo.PreviousStateScreenController"
+            prefHeight="200.0" prefWidth="600.0">
+    <children>
+        <!-- Main label asking if the user wants to load from previous settings -->
+        <Label fx:id="myMainLabel" alignment="CENTER" prefHeight="70.0" prefWidth="600.0" text="Would you like to load from previous settings?" textAlignment="CENTER" textFill="#4f2683">
+            <font>
+                <Font name="Arial Bold" size="25.0" />
+            </font>
+        </Label>
+
+        <!-- 'Yes' button for confirming the action -->
+        <Button fx:id="yesButton" alignment="CENTER" contentDisplay="CENTER" layoutX="212.0" layoutY="125.0" onAction="#handleYes" style="-fx-background-color: #4f2683" text="Yes" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font></Button>
+
+        <!-- 'No' button for declining the action -->
+        <Button fx:id="noButton" alignment="CENTER" contentDisplay="CENTER" layoutX="325.0" layoutY="125.0" onAction="#handleNo" prefHeight="36.0" prefWidth="63.0" style="-fx-background-color: #4f2683" text="No" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font></Button>
+    </children>
+</AnchorPane>

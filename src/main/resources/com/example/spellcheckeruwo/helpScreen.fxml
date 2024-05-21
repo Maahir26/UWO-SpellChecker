@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane alignment="BOTTOM_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane prefHeight="200.0" prefWidth="200.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Getting Started">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea editable="false" layoutX="11.0" layoutY="12.0" prefHeight="349.0" prefWidth="578.0" text="Account Setup&#10;&#10;To customize your account, head to Settings/Customize Profile.&#10;&#10;For Navigation Tips, click the 'Using Our Services' tab in the Help screen.&#10;&#10;For Frequently Asked Questions, head to the 'Stay Informed' tab in the Help Screen&#10;&#10;If you can't find what you're looking for, do not hesitate to contact our customer support team.&#10;We're here to help you every step of the way.&#10;&#10;Thank for for choosing our services, and we hope you have a great experience!" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Using Our Services">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea editable="false" layoutX="13.0" layoutY="13.0" prefHeight="348.0" prefWidth="572.0" text="Here's an overview of the features that we provide in our service:&#10;&#10;- Instant Grammar Checks&#10;- Contextual Suggestions&#10;- Advanced Spelling Correction&#10;- Style Enhancements&#10;- Vocabulary Enrichment&#10;- User-Friendly Interface&#10;- Customization Options&#10;&#10;How-To-Guide&#10;Once the application is open, you can proceed with the following steps:&#10;- Import your text&#10;- Initiate Grammar Check&#10;- Review Suggestions&#10;- Save your document" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Account Management">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea editable="false" layoutX="13.0" layoutY="14.0" prefHeight="346.0" prefWidth="577.0" text="To access your account settings, please navigate to the 'Accounts' tab in 'Settings'. &#10;Click on the 'Edit' or 'Update' tab, in which you can add your personal details&#10;&#10;Security: Tips to keep your account safe and secure.&#10;- Make sure you input a strong password&#10;- Enable our Two-Factor Authentication (2FA) for an additional layer of security&#10;- Establish a secure connection&#10;- Backup important data" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Contact Us">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea editable="false" layoutX="12.0" layoutY="9.0" prefHeight="351.0" prefWidth="577.0" text="How to reach us:&#10;&#10;support@spellcheckeruwo.ca&#10;Or you can reach us at (226)-(223-3423)" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Stay Informed">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea editable="false" layoutX="13.0" layoutY="11.0" prefHeight="349.0" prefWidth="577.0" text="Updates and Accouncements: Stay up-to-date with the latest news&#10;Blog: Explore our blog for in-depth information and tips" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</StackPane>
