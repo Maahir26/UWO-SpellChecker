@@ -21,3 +21,23 @@ The SpellChecker reads a text file and checks each word against a dictionary. Wo
 ├── Makefile # Compile instructions
 ├── README.md # Project documentation
 └── tests/ # Sample dictionary and input files
+
+## 🚀 Getting Started
+
+### Prerequisites
+- GCC or compatible C compiler
+- Unix/Linux terminal (or Windows WSL)
+
+🔍 Output
+The program prints all misspelled words and outputs statistics such as:
+
+Total words checked
+
+Misspelled words count
+
+Dictionary load time
+
+🛠 Customization
+You can tweak the hash table size or hash function in dictionary.c to experiment with performance.
+
+The tests/ folder contains sample dictionary and text files for easy testing.
